@@ -23,25 +23,25 @@ If you want to test the containers with **Singularity**, you'll need to either i
 {: .callout}
 
 
-#### Shell terminal
+### Shell terminal
 
 *Windows* users: [MobaXterm](https://mobaxterm.mobatek.net/download-home-edition.html) is the **preferred option**.  The *Portable Edition* is best, as it does not require administrative privileges.  
 <!--Other acceptable options would be [Visual Studio Code](https://code.visualstudio.com/) or PuTTY, but you will also need to install [Cygwin/X](https://x.cygwin.com) to run the example on X11 applications.  -->
 
 
-#### Container engines: installation DIY (Do It Yourself)
+### Container engines: installation DIY (Do It Yourself)
 
 If you have your own machine, you can install the required software yourself (might take a while).  
 Note that you will need ***admin* privileges** in the machine to finalise the installation.
 
-##### Linux box
+#### Linux box
 
 - Docker : [script]({{ page.root }}/files/install-docker.sh) \| [docs (unofficial)](https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/how-to-install-docker-on-ubuntu-18-04-lts-bionic-beaver.html)
 - Singularity (optional) : [script]({{ page.root }}/files/install-singularity.sh) \| [docs](https://sylabs.io/guides/3.5/user-guide/quick_start.html)
 
 **Note:** these install scripts have been tested on a Ubuntu machine through a user that can run *sudo* commands without password prompts. There's no warranty they will work in your Linux box, you should consider them as templates.
 
-##### macOS or Windows machine
+#### macOS or Windows machine
 
 For *Docker*, you can download and run installers for [macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) and [Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows/).
 
