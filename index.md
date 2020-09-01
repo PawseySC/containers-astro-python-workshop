@@ -7,7 +7,7 @@ permalink: index.html  # Is the only page that don't follow the partner /:path/i
 
 > ## Prerequisites
 >
-> You'll need a laptop with a web browser and a terminal. See also the [Setup](./setup.html) page.
+> You'll need a computer with a web browser, a terminal and the Docker engine.  See the [Setup](./setup.html) page for more details.
 > 
 > The tutorial [Containers on HPC and Cloud with Singularity](https://pawseysc.github.io/singularity-containers/) is the ideal starting point prior to going through this workshop.  
 {: .prereq}
