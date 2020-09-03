@@ -1,0 +1,20 @@
+FROM continuumio/miniconda3:4.8.2
+
+# note, as of september 2020, "--no-update-deps" seems not to be respected
+
+ARG REQ_FILE="requirements-3sep.yaml"
+ADD requirements.in /
+ADD $REQ_FILE /requirements.yaml
+RUN conda install -y --no-deps --file /requirements.yaml \
+      && conda clean -ay
+
+# conda activate is not robustly usable in a container.
+# then, go for an environment check in a test container, 
+# to see if you need to set any package specific variables in the container
+# env >before
+# conda install <..>
+# env >after
+# diff before after
+
+# this one is always good to have
+ENV CONDA_PREFIX="/opt/conda"

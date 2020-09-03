@@ -1,0 +1,9 @@
+FROM continuumio/miniconda3:4.8.2
+
+# note, as of september 2020, "--no-update-deps" seems not to be respected
+
+ARG REQ_FILE="requirements-3sep.yaml"
+ADD requirements.in /
+ADD $REQ_FILE /requirements.yaml
+RUN conda install -y --no-deps --file /requirements.yaml \
+      && conda clean -ay

@@ -1,0 +1,7 @@
+ARG PY_VERSION="3.8"
+FROM python:${PY_VERSION}-slim
+
+ARG ASTRO_VERSION="3.2.3"
+RUN pip --no-cache-dir install astropy==$ASTRO_VERSION
+
+CMD [ "/bin/bash" ]

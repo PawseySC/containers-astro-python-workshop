@@ -1,0 +1,7 @@
+FROM continuumio/miniconda3:4.8.2
+
+# note, as of september 2020, "--no-update-deps" seems not to be respected
+
+ARG ASTRO_VERSION="3.2.3"
+RUN conda install -y --no-update-deps astropy==$ASTRO_VERSION \
+      && conda clean -ay

@@ -1,0 +1,8 @@
+ARG PY_VERSION="3.8"
+FROM python:${PY_VERSION}-slim
+
+ARG REQ_FILE="requirements4-3sep.txt"
+ADD $REQ_FILE /requirements.txt
+RUN pip --no-cache-dir install --no-deps -r /requirements.txt
+
+CMD [ "/bin/bash" ]
