@@ -5,12 +5,17 @@ FROM continuumio/miniconda3:4.8.2
 ARG REQ_FILE="requirements-3sep.yaml"
 ADD requirements.in /
 ADD $REQ_FILE /requirements.yaml
+
 RUN conda install -y --no-deps --file /requirements.yaml \
       && conda clean -ay
 
 # conda activate is not robustly usable in a container.
 # then, go for an environment check in a test container, 
-# to see if you need to set any package specific variables in the container
+# to see if you need to set any package specific variables in the container:
+#
+# run this from the miniconda3 container
+# docker run --rm -it -v $(pwd):/data -w /data continuumio/miniconda3:4.8.2 bash
+#
 # env >before
 # conda install <..>
 # env >after

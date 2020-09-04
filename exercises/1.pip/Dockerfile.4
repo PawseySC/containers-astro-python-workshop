@@ -3,6 +3,7 @@ FROM python:3.8-slim
 ARG REQ_FILE="requirements4-3sep.txt"
 ADD requirements.in /
 ADD $REQ_FILE /requirements.txt
+
 RUN pip --no-cache-dir install --no-deps -r /requirements.txt
 
 CMD [ "/bin/bash" ]

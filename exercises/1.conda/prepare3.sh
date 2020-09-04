@@ -14,4 +14,3 @@ cp $ENV_FILE $REQ_FILE
 sed -i -n '/dependencies/,/prefix/p' $REQ_FILE
 sed -i -e '/dependencies:/d' -e '/prefix:/d' $REQ_FILE
 sed -i 's/ *- //g' $REQ_FILE
-
