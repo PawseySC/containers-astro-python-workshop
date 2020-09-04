@@ -5,6 +5,5 @@
 
 pip install -r requirements.in
 
-REQ_LABEL="3sep"
-REQ_FILE="requirements4-${REQ_LABEL}.txt"
+REQ_FILE="requirements4-3sep.txt"
 pip freeze >$REQ_FILE
