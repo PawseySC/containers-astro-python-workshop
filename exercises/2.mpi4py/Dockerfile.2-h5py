@@ -32,4 +32,26 @@ ARG MPI4PY_VERSION="3.0.3"
 
 RUN pip --no-cache-dir install --no-deps mpi4py==${MPI4PY_VERSION}
 
+# Install HDF5-parallel
+
+ARG HDF5_VERSION="1.10.4"
+ARG HDF5_CONFIGURE_OPTIONS="--prefix=/usr --enable-parallel CC=mpicc"
+ARG HDF5_MAKE_OPTIONS="-j4"
+
+RUN mkdir -p /tmp/hdf5-build \
+      && cd /tmp/hdf5-build \
+      && HDF5_VER_MM="${HDF5_VERSION%.*}" \
+      && wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-${HDF5_VER_MM}/hdf5-${HDF5_VERSION}/src/hdf5-${HDF5_VERSION}.tar.gz \
+      && tar xzf hdf5-${HDF5_VERSION}.tar.gz \
+      && cd hdf5-${HDF5_VERSION} \
+      && ./configure ${HDF5_CONFIGURE_OPTIONS} \
+      && make ${HDF5_MAKE_OPTIONS} \
+      && make install \
+      && ldconfig \
+      && cd / \
+      && rm -rf /tmp/hdf5-build
+
+ARG H5PY_VERSION="2.10.0"
+RUN CC="mpicc" HDF5_MPI="ON" HDF5_DIR="/usr" pip --no-cache-dir install --no-deps --no-binary=h5py h5py==${H5PY_VERSION}
+
 CMD [ "/bin/bash" ]
