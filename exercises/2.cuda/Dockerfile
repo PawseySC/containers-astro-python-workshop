@@ -1,5 +1,4 @@
-ARG PY_VERSION=3.8
-FROM python:${PY_VERSION}-slim
+FROM python:3.8-slim
 
 ##### START NVIDIA CUDA DOCKERFILES ####
 #LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
