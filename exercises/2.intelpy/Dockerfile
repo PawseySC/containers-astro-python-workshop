@@ -1,5 +1,4 @@
-ARG IPY_VERSION=2020.2
-FROM intelpython/intelpython3_core:${IPY_VERSION}
+FROM intelpython/intelpython3_core:2020.2
 # Note: these python images are based on Debian (as of 27 August 2020, Debian 10 Buster)
 
 ENV CONDA_PREFIX="/opt/conda"
