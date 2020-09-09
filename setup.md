@@ -38,6 +38,7 @@ Note that you will need ***admin* privileges** in the machine to finalise the in
 
 - Docker : [script]({{ page.root }}/files/install-docker.sh) \| [docs (unofficial)](https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/how-to-install-docker-on-ubuntu-18-04-lts-bionic-beaver.html)
 - Singularity (optional) : [script]({{ page.root }}/files/install-singularity.sh) \| [docs](https://sylabs.io/guides/3.5/user-guide/quick_start.html)
+- pip-tools (optional) : install Python and pip, then run `pip install pip-tools`
 - MPICH (optional) : [script]({{ page.root }}/files/install-mpich.sh)
 
 **Note:** these install scripts have been tested on a Ubuntu machine through a user that can run *sudo* commands without password prompts. There's no warranty they will work in your Linux box, you should consider them as templates.
