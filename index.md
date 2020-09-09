@@ -15,4 +15,4 @@ permalink: index.html  # Is the only page that don't follow the partner /:path/i
 
 ### Core topic
 
-The focus of this workshop is on Python containers, including references to setting up and running MPI- and GPU- enabled applications.
+The focus of this workshop is on Python containers, including building practices and setting up and running MPI- and GPU- enabled applications.
