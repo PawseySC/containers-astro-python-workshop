@@ -19,7 +19,7 @@ If you want to test the containers with **Singularity**, you'll need to either i
 > * **Nimbus Cloud @Pawsey**: if you have access, both Singularity and Docker are preinstalled in the *Ubuntu Pawsey* base image.
 > <!-- Test: Ubuntu 18.04 VM with 2 cores, 6 GB RAM, 40 GB disk -->
 > 
-> * **Zeus @Pawsey**: if you have access, Singularity can be loaded with `module load singularity`. 
+> * **Zeus/Topaz/Garrawarla @Pawsey**: if you have access, Singularity can be loaded with `module load singularity`. 
 {: .callout}
 
 
